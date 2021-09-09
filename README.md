@@ -247,5 +247,86 @@ User is on the https://app.interviewme.pl/dashboard/account page.
 User is on the https://app.interviewme.pl/dashboard/account page.  
 **STEPS TO REPRODUCE**: 1. Users clicks the `Pobierz moje dane` button at the bottom of the page.          
 **EXPECTED RESULT**: Popup message titled `Eksport Twoich danych jest już w toku` with loading spinner is displayed and data is sent to the user's email address.         
-**ACTUAL RESULT**: Popup message titled `Eksport Twoich danych jest już w toku` with loading spinner is displayed.          
-**STATUS PASS/FAIL**: FAIL   
+**ACTUAL RESULT**: Popup message titled `Eksport Twoich danych jest już w toku` with loading spinner is displayed but nothing happens after few minutes. Data is not sent successfully.              
+**STATUS PASS/FAIL**: FAIL  
+
+**ID**: TC.18  
+**TITLE**: Verify that user can navigate to `Profil` section.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Profil` button on the left side menu.  
+**EXPECTED RESULT**: User lands on https://app.interviewme.pl/dashboard/profile page.  
+**ACTUAL RESULT**: Users is navigated to https://app.interviewme.pl/dashboard/profile page.  
+**STATUS PASS/FAIL**: PASS    
+
+**ID**: TC.19  
+**TITLE**: Verify that user can edit and save the `Dane osobowe` section.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Edytuj dane osobowe` button.  
+2. User puts `Mateusz` value in `Imię` section, `Nowicki` value in `Nazwisko` section.  
+3. User chooses `Mężczyzna` value from the dropdown list in `Płeć` section.  
+4. User clicks `Zapisz` button at the bottom of the page.
+**EXPECTED RESULT**: New data is saved and popup with `Twoje dane zostały pomyślnie zapisane` is displayed.  
+**ACTUAL RESULT**: `Problem z wysłaniem formularza` error is displayed. Data is not saved and users needs to leave.
+**STATUS PASS/FAIL**: FAIL    
+
+**ID**: TC.20  
+**TITLE**: Verify that user can edit and save the `Doświadczenie zawodowe` section.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Edytuj doświadczenie zawodowe` button at the bottom of the page.  
+2. User puts `QA` value in `Aktualny zawód` section, `Senior` value in `Aktualny poziom zawodowy` section.    
+3. User deletes the previously saved value in `Wykształcenie` section.    
+4. User clicks `Zapisz` button at the bottom of the page.  
+**EXPECTED RESULT**: New data is saved and displayed under `Doświadczenie zawodowe` section.    
+**ACTUAL RESULT**: Screen with newly saved data is displayed with correct data.  
+**STATUS PASS/FAIL**: PASS   
+
+**ID**: TC.21  
+**TITLE**: Verify that user can navigate to `Oferty pracy` section.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Oferty pracy` button on the left side menu.  
+**EXPECTED RESULT**: User lands on https://app.interviewme.pl/dashboard/job-offers page.  
+**ACTUAL RESULT**: Users is navigated to https://app.interviewme.pl/dashboard/job-offers page.  
+**STATUS PASS/FAIL**: PASS   
+
+**ID**: TC.21  
+**TITLE**: Verify that user can navigate to `Oferty pracy` section.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Oferty pracy` button on the left side menu.  
+**EXPECTED RESULT**: User lands on https://app.interviewme.pl/dashboard/job-offers page.  
+**ACTUAL RESULT**: Users is navigated to https://app.interviewme.pl/dashboard/job-offers page.  
+**STATUS PASS/FAIL**: PASS   
+
+**ID**: TC.22  
+**TITLE**: Verify that clicking `Search` button without any additional input changes nothing.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users clicks `Search` button in the top right corner.    
+**EXPECTED RESULT**: Page refreshes without showing any specific results.   
+**ACTUAL RESULT**: No changes on the `Oferty pracy` page.  
+**STATUS PASS/FAIL**: PASS   
+
+**ID**: TC.23 
+**TITLE**: Verify that user can search for a specific `Stanowisko`.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users inputs `tapeciarz` value in `Stanowisko` field.    
+2. User clicks `Szukaj` button.  
+**EXPECTED RESULT**: Page shows only results that includes value `Tapeciarz`.  
+**ACTUAL RESULT**: Just one specific result is shown on the page.  
+**STATUS PASS/FAIL**: PASS   
+
+**ID**: TC.23 
+**TITLE**: Verify that user can search for a specific `Lokalizacja`.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the home page https://app.interviewme.pl/dashboard/main  
+**STEPS TO REPRODUCE**: 1. Users inputs `Sopot` value in `Lokalizacja` field.  
+2. User clicks `Szukaj` button.  
+**EXPECTED RESULT**: Page shows only results that includes value `Sopot`.    
+**ACTUAL RESULT**: Only results with `Sopot` as `Lokalizacja` are shown on the page.  
+**STATUS PASS/FAIL**: PASS   
+
