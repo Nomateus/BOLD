@@ -192,3 +192,60 @@ User is on the https://app.interviewme.pl/dashboard/account page.
 **EXPECTED RESULT**: Loading spinner shows up and settings are saved. After user refreshed the page settings are still saved just like user selected during the tests.  
 **ACTUAL RESULT**: New settings are saved.        
 **STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.12 
+**TITLE**: Verify that user can open `Regulamin` page.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Regulamin` button.  
+**EXPECTED RESULT**: User is redirected to https://interviewme.pl/regulamin page.  
+**ACTUAL RESULT**: User is redirected to https://interviewme.pl/regulamin page.    
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.13 
+**TITLE**: Verify that user can open `Polityka prywatności` page.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Polityka prywatności` button.  
+**EXPECTED RESULT**: User is redirected to https://app.interviewme.pl/dashboard/account/privacy-policy page.  
+**ACTUAL RESULT**: User is redirected to https://app.interviewme.pl/dashboard/account/privacy-policy page.    
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.14 
+**TITLE**: Verify that user can open `Pełna wersja polityki prywatności` inside `Polityka prywatności` page.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Polityka prywatności` button.    
+2. User scrolls down to the bottom of the page and clicks `Pełna wersja polityki prywatności` link.  
+**EXPECTED RESULT**: User is redirected to https://interviewme.pl/polityka-prywatnosci page.  
+**ACTUAL RESULT**: User is redirected to https://interviewme.pl/polityka-prywatnosci page.    
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.15 
+**TITLE**: Verify that user can delete the account using specific link inside `Polityka prywatności` page.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Polityka prywatności` button.      
+2. User scrolls down until user sees blue link `usuwając konto z serwisu` and clicks it.      
+3. Users selects two checkboxes and clicks `Usuń konto` button.    
+**EXPECTED RESULT**: (I didn't clickecd on `Usuń konto` because if this actually works I won't be able to use this account and continue to write test cases.)   
+**ACTUAL RESULT**:  (I didn't clickecd on `Usuń konto` because if this actually works I won't be able to use this account and continue to write test cases.)     
+**STATUS PASS/FAIL**: ?   
+
+**ID**: TC.16 
+**TITLE**: Verify that user can unselect the `Zapoznałem/am się i akceptuję Regulamin i Politykę prywatności`.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users unselects the `Zapoznałem/am się i akceptuję Regulamin i Politykę prywatności` checkbox.        
+**EXPECTED RESULT**: Checkbox is unselected.       
+**ACTUAL RESULT**: User is presented with a new popup that let him delete the account.        
+**STATUS PASS/FAIL**: FAIL   
+
+**ID**: TC.17 
+**TITLE**: Verify that user can download his personal data using `Pobierz moje dane` button.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks the `Pobierz moje dane` button at the bottom of the page.          
+**EXPECTED RESULT**: Popup message titled `Eksport Twoich danych jest już w toku` with loading spinner is displayed and data is sent to the user's email address.         
+**ACTUAL RESULT**: Popup message titled `Eksport Twoich danych jest już w toku` with loading spinner is displayed.          
+**STATUS PASS/FAIL**: FAIL   
