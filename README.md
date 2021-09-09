@@ -362,6 +362,17 @@ User is on the home page https://app.interviewme.pl/dashboard/main
 **ACTUAL RESULT**: No results are shown and correct message is shown.       
 **STATUS PASS/FAIL**: PASS    
 
-I could really add many more test cases but I will end now. I hope this will be enough for some basic functionalities.
+I could really add many more test cases but I will end now. I hope this will be enough for some basic functionalities.  
 
-When it comes to selecting test cases that could be automated I have some 
+When it comes to selecting test cases that could be automated we should aim to automate only these types of test cases that:   
+* will be repeated often   
+* that are changed by developers very seldom  
+* that are time consuming (it saves as a lot of time)  
+
+By any means I'm not an expert in automation tests but I would automate following test cases:  
+* TC.05  
+* TC.07  
+* TC.08  
+* TC.09  
+* TC.10  
+* TC.17  
