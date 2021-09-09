@@ -110,5 +110,85 @@ User is on the https://app.interviewme.pl/dashboard/account page.
 **ACTUAL RESULT**: `Opinia` feature is successfully closed.   
 **STATUS PASS/FAIL**: PASS  
 
-(we could do the same test case for closing the `Zaznacz element na stronie` feature but I will skip it since this is not a basic functionality)
+(I could do the same test case for closing the `Zaznacz element na stronie` feature but I will skip it since this is not a basic functionality)  
 
+**ID**: TC.05  
+**TITLE**: Verify that user can successfully change e-mail using `Zmień adres e-mail` button.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień adres e-mail` button on the center menu.  
+2. User types `mateusztest@bold.com` as new e-mail in the text box.  
+3. User clicks on red `Zmień adres e-mail` button.  
+**EXPECTED RESULT**: `Świetnie! Zmieniłeś swój adres e-mail na mateusztest@bold.com` message is displayed.  
+**ACTUAL RESULT**: `Świetnie! Zmieniłeś swój adres e-mail na mateusztest@bold.com` message is displayed.   
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.06  
+**TITLE**: Verify that user can successfully close `Podaj nowy adres email` popup.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień adres e-mail` button on the center menu.  
+2. User clicks `Anuluj` button undert the text box.  
+3. User is navigated to the https://app.interviewme.pl/dashboard/account page.  
+**EXPECTED RESULT**: `Konto` page is displayed and `Podaj nowy adres email` popup is closed.    
+**ACTUAL RESULT**: `Konto` page is displayed and `Podaj nowy adres email` popup is closed.       
+**STATUS PASS/FAIL**: PASS
+
+**ID**: TC.07  
+**TITLE**: Verify that user can't input invalid email format.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień adres e-mail` button on the center menu.  
+2. User puts `testtest.pl` in the e-mail text box.      
+**EXPECTED RESULT**: `Niepoprawny adres email` message is shown at the bottom and user can't use `Zmień adres e-mail button` successfully.  
+**ACTUAL RESULT**: `Niepoprawny adres email` message is shown at the bottom and user can't use `Zmień adres e-mail` button successfully.    
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.08  
+**TITLE**: Verify that user can reset the password.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień hasło` button on the center menu.  
+2. User clicks `Zapomniałeś hasła?` button.  
+3. User puts `mateusztest@bold.com` and clicks `Wyślij link do resetowania hasła` button.    
+**EXPECTED RESULT**: Popup message titled `Wiadomość e-mail została wysłana` appears with basic information about actions taken and a tip.  
+**ACTUAL RESULT**: Popup message titled `Wiadomość e-mail została wysłana` appears with basic information and tip.      
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.09  
+**TITLE**: Verify that user can change the password.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień hasło` button on the center menu.  
+2. User puts `Password1` in the `Nowe hasło` text box.  
+3. User clicks `Zmień hasło` button.    
+**EXPECTED RESULT**: Popup message titled `Twoje hasło zostało zmienione` appears with basic information about actions taken and a tip.  
+**ACTUAL RESULT**: Popup message titled `Twoje hasło zostało zmienione` appears with basic information and tip.      
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.10  
+**TITLE**: Verify that user meets the new password requirements when changing the password.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users clicks `Zmień hasło` button on the center menu.  
+2. User puts `X` in the `Nowe hasło` text box.    
+3. Text box is highlighted in red color and `Co najmniej 7 znaków` text appears.    
+4. User deletes previous value and puts `QWERTYU`.    
+5. Text box is highlighted in red color and `Pole musi zawierać przynajmniej jedną cyfrę` text appears.    
+6. User deletes previous value and puts `QWERTYU1`.   
+7. User click `Zmień hasło` button.         
+**EXPECTED RESULT**: Popup message titled `Twoje hasło zostało zmienione` appears with basic information about actions taken and a tip.  
+**ACTUAL RESULT**: Popup message titled `Twoje hasło zostało zmienione` appears with basic information and tip.      
+**STATUS PASS/FAIL**: PASS  
+
+**ID**: TC.11  
+**TITLE**: Verify that user can successfully change and save `Komunikacja e-mail` settings.  
+**PRE-CONDITIONS**: User is logged in with following credentials: `vincent-sqa+rekrutacja@bold.com` / `parmezan6`  
+User is on the https://app.interviewme.pl/dashboard/account page.  
+**STEPS TO REPRODUCE**: 1. Users selects the first checkbox in `Komunikacja e-mail` section.  
+2. User selects and unselects the second checbox in `Komunikacja e-mail` section.  
+3. User clicks `Zapisz` button under checkboxes.
+4. User refreshes the page using F5 keyboard button.  
+**EXPECTED RESULT**: Loading spinner shows up and settings are saved. After user refreshed the page settings are still saved just like user selected during the tests.  
+**ACTUAL RESULT**: New settings are saved.        
+**STATUS PASS/FAIL**: PASS  
